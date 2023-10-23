@@ -1,3 +1,27 @@
+<?php
+    include "Includes/dbconn.php";
+
+    if (isset($_POST['submit'])){
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $email = $_POST['email'];
+        $birthday = $_POST['birthday'];
+        $address = $_POST['address'];
+        $gender = $_POST['gender'];
+
+        $sql = "INSERT INTO `gittable`(`id`, `firstname`, `lastname`, `email`, `dateofbirth`, `address`, `gender`) VALUES (NULL,'$first_name','$last_name','$email','$birthday','$address','$gender')";
+
+        $result = mysqli_query($conn, $sql);
+
+        if($result){
+            header("Location:read.php?msg=New Record Created Successfully");
+        }
+        else{
+            echo "Failed:". mysqli_error($conn);
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,9 +65,23 @@
                         <label class="form-label" style="font-weight:700;">Date of Birth</label>
                         <input type="date" class="form-control" name="birthday" required>
                     </div>
-                    <div class="mb">
+                    <div class="mb-3">
                         <label class="form-label" style="font-weight:700;">Address</label>
                         <input type="text" class="form-control" name="address" placeholder="Enter your address" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label style="font-weight:700;">Gender:</label> &nbsp;
+                        <input type="radio" class="form-check-input" name="gender" id="male" value="Male">
+                        <label for="male" class="form-input-label">Male</label>
+                        &nbsp;
+                        <input type="radio" class="form-check-input" name="gender" id="female" value="Female">
+                        <label for="female" class="form-input-label">Female</label>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-success" name="submit" style="Font-weight:700;">SAVE</button>
+                        <a href="read.php" class="btn btn-danger" style="font-weight:700;">CANCEL</a>
                     </div>
                 </div>
             </form>
