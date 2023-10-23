@@ -21,9 +21,9 @@
         </div>
 
         <div class="container d-flex justify-content-center">
-            <form action="" method="post" style="width:50vw; min-width:300px;">
+            <form action="" method="post" style="width:35vw; min-width:300px;">
                 <div class="row mb-2">
-                    <div class="col">
+                    <div class="col mb-3">
                         <label class="form-label" style="font-weight:700;">First Name:</label>
                         <input type="text" class="form-control" name="first_name" placeholder="Enter your firstname" required>
                     </div>
@@ -31,6 +31,19 @@
                     <div class="col">
                         <label class="form-label" style="font-weight:700;">Last Name:</label>
                         <input type="text" class="form-control" name="last_name" placeholder="Enter your lastname" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight:700;">Email:</label>
+                        <input type="text" class="form-control" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight:700;">Date of Birth</label>
+                        <input type="date" class="form-control" name="birthday" required>
+                    </div>
+                    <div class="mb">
+                        <label class="form-label" style="font-weight:700;">Address</label>
+                        <input type="text" class="form-control" name="address" placeholder="Enter your address" required>
                     </div>
                 </div>
             </form>
