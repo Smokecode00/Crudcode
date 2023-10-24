@@ -50,7 +50,7 @@
                     <tr>
                         <td><?php echo $row['id'] ?></td>
                         <td><?php echo $row['firstname'] ?></td>
-                        <td><?php echo $row['lastname'] ?></td>
+                        <td><?php echo $row['lastname'] ?></td> 
                         <td><?php echo $row['email'] ?></td>
                         <td><?php echo $row['dateofbirth'] ?></td>
                         <td><?php echo $row['address'] ?></td>
