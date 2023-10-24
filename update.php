@@ -1,6 +1,6 @@
 <?php
     include "Includes/dbconn.php";
-    $id = $_GET["id"];
+    $id = $_GET["id"];  
 
     if (isset($_POST['submit'])){
         $first_name = $_POST['first_name'];
